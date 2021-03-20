@@ -39,11 +39,21 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Terminal
+" 起動時にjobmode
 augroup neovim-terminal
   au!
   au TermOpen * startinsert
 augroup END
-tnoremap <Esc> <C-\><C-n>
+" 移動のあともジョブモード
+if has('nvim')
+  " Neovim
+  autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+else
+  " Vim
+  autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
+endif 
+tnoremap <C-h> <C-\><C-n><C-w><C-h>
+tnoremap <C-l> <C-\><C-n><C-w><C-l>
 
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
