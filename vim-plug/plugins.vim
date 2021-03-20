@@ -42,4 +42,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+    " sneak
+    Plug 'justinmk/vim-sneak'
 call plug#end()
