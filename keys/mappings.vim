@@ -55,6 +55,7 @@ endif
 tnoremap <C-h> <C-\><C-n><C-w><C-h>
 tnoremap <C-l> <C-\><C-n><C-w><C-l>
 
+inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
 vnoremap <Leader>/ :Commentary<CR>

@@ -203,3 +203,16 @@ let g:coc_explorer_global_presets = {
 nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+""" Customize colors
+func! s:my_colors_setup() abort
+    " this is an example
+    hi Pmenu guibg=#d7e5dc gui=NONE
+    hi PmenuSel guibg=#b7c7b7 gui=NONE
+    hi PmenuSbar guibg=#bcbcbc
+    hi PmenuThumb guibg=#585858
+endfunc
+
+augroup colorscheme_coc_setup | au!
+    au ColorScheme * call s:my_colors_setup()
+augroup END
