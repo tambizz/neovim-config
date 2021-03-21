@@ -1,4 +1,5 @@
 let g:startify_session_dir = '~/.config/nvim/session'
+nnoremap <Leader>s :<C-u>Startify<CR>
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']            },

@@ -56,6 +56,7 @@ vnoremap > >gv
     autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
   endif 
   tnoremap jk <C-\><C-n>
+  tnoremap kj <C-\><C-n>
 
 " braceses
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
