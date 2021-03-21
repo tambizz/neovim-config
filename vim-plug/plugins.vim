@@ -7,6 +7,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+    " Auto Save
+    Plug 'vim-scripts/vim-auto-save'
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -34,6 +36,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
+
+    " Rainbow
+    Plug 'oblitum/rainbow'
 
     " Rainbow parentheses
     Plug 'junegunn/rainbow_parentheses.vim'

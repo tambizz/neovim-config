@@ -11,6 +11,9 @@ nnoremap <M-l>    :vertical resize +2<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" Update init.vim
+noremap <F5> :so $MYVIMRC<CR>
+
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
@@ -39,23 +42,24 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Terminal
-" 起動時にjobmode
-augroup neovim-terminal
-  au!
-  au TermOpen * startinsert
-augroup END
-" 移動のあともジョブモード
-if has('nvim')
-  " Neovim
-  autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
-else
-  " Vim
-  autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
-endif 
-tnoremap <C-h> <C-\><C-n><C-w><C-h>
-tnoremap <C-l> <C-\><C-n><C-w><C-l>
+  " 起動時にjobmode
+  augroup neovim-terminal
+    au!
+    au TermOpen * startinsert
+  augroup END
+  " 移動のあともジョブモード
+  if has('nvim')
+    " Neovim
+    autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+  else
+    " Vim
+    autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
+  endif 
+  tnoremap jk <C-\><C-n>
 
+" braceses
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
 vnoremap <Leader>/ :Commentary<CR>
