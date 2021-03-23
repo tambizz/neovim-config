@@ -57,9 +57,11 @@ vnoremap > >gv
   endif 
   tnoremap jk <C-\><C-n>
   tnoremap kj <C-\><C-n>
+  " terminal split
+  nnoremap <C-t> :<C-u>vs<CR>:term<CR>
 
 " braceses
-inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+" inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
